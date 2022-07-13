@@ -7,7 +7,7 @@
         </div>
         <div class="app-nav-content-wrapper">
           <div style="gap: 8px;" class="scroller-base scroller">
-            <router-link to="/">
+            <router-link to="/home">
               <div class="app-nav-item">
                   <div class="app-item-icon"><font-awesome-icon icon="fa-solid fa-house" /></div>
                   <div>Home</div>
@@ -45,7 +45,7 @@
     --main-dark-color: #E5661A;
     --nav-dark: #1e262c;
     --nav-item-color: #ffffff80;
-    --nav-item-color-hover: #ffffffbf;
+    --nav-item-color-hover: #ffffff0a;
     --background-color: #edf1f2;
     --card-bg: #ffffff;
     --pagination-item-bg: #ffffff;
@@ -86,7 +86,7 @@
   .app-nav-header {
     color: var(--light-color);
     display: flex;
-    padding: 8px;
+    padding: 16px 8px;
   }
 
   .app-nav-content-wrapper{
@@ -94,33 +94,46 @@
     flex-direction: column;
     flex: 1 1 auto;
     gap: 8px;
-    padding: 4px 8px;
-  }
-
-  .app-nav-content-wrapper .app-nav-item {
-    
+    padding: 4px 5px;
   }
 
   .app-nav-content-wrapper a{
     color: var(--light-color);
     text-decoration: none;
   }
+  
+  .app-item-icon {
+  }
 
   .app-nav-item {
+    border-radius: 4px;
     display: flex;
     gap: 8px;
     padding: 8px 4px 8px 8px;
   }
+  
+  .app-nav-item:hover {
+    background-color: var(--nav-item-color-hover);
+  }
 
   .app-nav-item .app-item-icon svg {
     color: var(--light-color);
+  }
+  
+  .is-active .app-nav-item {
+    background-color: whitesmoke;
+    color: var(--nav-dark);
+  }
+  
+  .is-active .app-item-icon svg {
+    color: var(--nav-dark);
   }
 
   .app-body-header {
     background-color: var(--main-dark-color);
     display: flex;
     flex: 0 1 auto;
-    padding: 8px;
+    padding: 16px 8px;
     height: 16px;
   }
 

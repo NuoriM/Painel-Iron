@@ -9,3 +9,16 @@
     </div>
   </div>
 </template>
+<script>
+import { mapActions } from 'vuex'
+
+export default {
+  name: "ListaEmblemasView",
+  methods: {
+    ...mapActions(["obterBadges"]),
+  },
+  mounted(){
+    console.log(this.obterBadges())
+  }
+}
+</script>
